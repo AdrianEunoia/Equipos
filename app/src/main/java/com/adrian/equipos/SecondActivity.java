@@ -17,21 +17,37 @@ public class SecondActivity extends AppCompatActivity {
     AdaptadorJugadores adaptadorJugadores;
     RecyclerView recyclerJugadores;
     ArrayList<Jugadores> listaJugadores;
+    // VAR INTENTS
+    String equipoPasado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+        // Creamos metodo para recuperar datos
         instancias();
+        recuperarDatos();
     }
+
+    private void recuperarDatos() {
+        if(getIntent().getExtras() != null){
+            String equipoPasado = (getIntent().getExtras().get(MainActivity.TAG_1)).toString();
+            if(equipoPasado.equals("Real Madrid")){
+                listaJugadores = Datos.newInstance().listaRealMadrid();
+            }else{
+                listaJugadores = Datos.newInstance().listaJugadoresRandom();
+            }
+            // Adaptadores
+            adaptadorJugadores = new AdaptadorJugadores(SecondActivity.this,listaJugadores);
+            recyclerJugadores.setAdapter(adaptadorJugadores);
+            adaptadorJugadores.notifyDataSetChanged();
+            recyclerJugadores.setLayoutManager(new LinearLayoutManager(this,RecyclerView.VERTICAL,false));
+        }
+    }
+
     private void instancias() {
         recyclerJugadores = findViewById(R.id.idRecyclerJugadores);
         listaJugadores = new ArrayList();
-        listaJugadores = Datos.newInstance().listaJugadores();
-        // Adaptadores
-        adaptadorJugadores = new AdaptadorJugadores(SecondActivity.this,listaJugadores);
-        recyclerJugadores.setAdapter(adaptadorJugadores);
-        adaptadorJugadores.notifyDataSetChanged();
-        recyclerJugadores.setLayoutManager(new LinearLayoutManager(this,RecyclerView.VERTICAL,false));
+
     }
 }

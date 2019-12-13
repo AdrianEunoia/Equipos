@@ -53,7 +53,7 @@ public class Datos {
         lista.add(new Ligas("CALCIO SERIE A",R.drawable.calcio,listaEquiposItalia()));
         return lista;
     }
-    public ArrayList listaJugadores(){
+    public ArrayList listaRealMadrid(){
         // Lista facilitada por Jaime //
         ArrayList<Jugadores> lista = new ArrayList<>();
         lista.add(new Jugadores("Alphonse  Areola",false,R.drawable.jugador));
@@ -80,6 +80,35 @@ public class Datos {
         lista.add(new Jugadores("Brahim Diaz",false,R.drawable.jugador));
         lista.add(new Jugadores("Vinicius Junior ",true,R.drawable.jugador));
         lista.add(new Jugadores("Rodrygo Goes",false,R.drawable.jugador));
+        return lista;
+    }
+    public ArrayList listaJugadoresRandom(){
+        // Lista facilitada por Jaime //
+        ArrayList<Jugadores> lista = new ArrayList<>();
+        lista.add(new Jugadores("Random  Areola",false,R.drawable.jugador));
+        lista.add(new Jugadores("Random Courtois",true,R.drawable.jugador));
+        lista.add(new Jugadores("Random Carvajal",true,R.drawable.jugador));
+        lista.add(new Jugadores("Random Militao",false,R.drawable.jugador));
+        lista.add(new Jugadores("Random Ramos",true,R.drawable.jugador));
+        lista.add(new Jugadores("Random Varane",true,R.drawable.jugador));
+        lista.add(new Jugadores("Random Vieira",true,R.drawable.jugador));
+        lista.add(new Jugadores("Random Odriozola",false,R.drawable.jugador));
+        lista.add(new Jugadores("Random Mendy",false,R.drawable.jugador));
+        lista.add(new Jugadores("Random Kroos",true,R.drawable.jugador));
+        lista.add(new Jugadores("Random Modric",true,R.drawable.jugador));
+        lista.add(new Jugadores("Random Casemiro",true,R.drawable.jugador));
+        lista.add(new Jugadores("Random Valverde",false,R.drawable.jugador));
+        lista.add(new Jugadores("Random Rodriguez",true,R.drawable.jugador));
+        lista.add(new Jugadores("Random Alarcón",false,R.drawable.jugador));
+        lista.add(new Jugadores("Random Hazard",true,R.drawable.jugador));
+        lista.add(new Jugadores("Random Bencema",true,R.drawable.jugador));
+        lista.add(new Jugadores("Random Bale",false,R.drawable.jugador));
+        lista.add(new Jugadores("Random Vázquez",true,R.drawable.jugador));
+        lista.add(new Jugadores("Random Jóvic",false,R.drawable.jugador));
+        lista.add(new Jugadores("Random Asensio",false,R.drawable.jugador));
+        lista.add(new Jugadores("Random Diaz",false,R.drawable.jugador));
+        lista.add(new Jugadores("Random Junior ",true,R.drawable.jugador));
+        lista.add(new Jugadores("Random Goes",false,R.drawable.jugador));
         return lista;
     }
 }

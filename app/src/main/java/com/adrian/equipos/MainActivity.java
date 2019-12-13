@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements AdaptadorLigas.On
     public void onMiRecycler(Equipos equipos) {
         System.out.println(equipos.getNombreEquipos());
         Intent intentEquipos = new Intent(getApplicationContext(),SecondActivity.class);
-        intentEquipos.putExtra(TAG_1,equipos);
+        intentEquipos.putExtra(TAG_1,equipos.getNombreEquipos());
         startActivity(intentEquipos);
     }
 }
